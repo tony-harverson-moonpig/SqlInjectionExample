@@ -1,0 +1,60 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool: IntegrationScaleSet
+
+resources:
+  repositories:
+    - repository: corePipelines
+      type: git
+      name: Roadmap/CorePipelines
+steps:
+  - task: UseDotNet@2
+    inputs:
+      version: 8.x
+
+  - checkout: self
+    fetchDepth: 0
+
+  - task: SonarCloudPrepare@3
+    inputs:
+      SonarCloud: 'SonarCloud'
+      organization: '$(sonarCloudOrg)'
+      scannerMode: 'dotnet'
+      projectKey: '$(sonarCloudProjectKey)'
+      projectName: '$(sonarCloudProjectName)'
+      extraProperties: |
+        sonar.exclusions=**/obj/**,**/*.dll,**/*Tests/**/*,**/*.json
+        sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+        sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
+        sonar.projectBaseDir=$(Build.SourcesDirectory)
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Run tests'
+    inputs:
+      command: 'test'
+      arguments: '--configuration Debug /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:Exclude="[VulnerableFunction]Program"'
+
+  - task: SonarCloudAnalyze@3
+
+  - task: SonarCloudPublish@3
+    inputs:
+      pollingTimeoutSec: '300'
+
+  - task: DotNetCoreCLI@2
+    displayName: "dotnet publish"
+    inputs:
+      command: "publish"
+      arguments: "--runtime linux-x64 --configuration Release --no-self-contained --output $(Build.ArtifactStagingDirectory)/out -p:DebugType=None"
+      projects: "*/*.csproj"
+      modifyOutputPath: true
+      publishWebProjects: false
+
+
+  - task: PublishBuildArtifacts@1
+    displayName: "publishing artifacts"
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "drop"

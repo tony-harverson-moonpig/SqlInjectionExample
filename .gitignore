@@ -1,0 +1,99 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Oo]bj/
+[Bb]in/
+*.dll
+*.exe
+*.app
+*.log
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored if you use Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlh
+*.tli
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+.builds
+
+# Visual Studio Code
+.vscode/
+
+# Others
+TestResults/
+*.dbmdl
+*.jfm
+*.cache
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Azure Pipelines
+*.coverage
+*.coveragexml
+*.trx
+*.testsettings
+*.runsettings
+*.vstest.console*.log
+
+# Local history for Visual Studio
+.localhistory/
+
+# Node.js
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Rider
+.idea/
+*.sln.iml
+
+# code coverage report
+coverage.opencover.xml

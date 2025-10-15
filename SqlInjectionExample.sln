@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VulnerableFunction", "VulnerableFunction\VulnerableFunction.csproj", "{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VulnerableFunction.Tests", "VulnerableFunction.Tests\VulnerableFunction.Tests.csproj", "{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.azure-pipelines\build-and-scan.yml = .azure-pipelines\build-and-scan.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Debug|x64.Build.0 = Debug|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Debug|x86.Build.0 = Debug|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Release|x64.ActiveCfg = Release|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Release|x64.Build.0 = Release|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Release|x86.ActiveCfg = Release|Any CPU
+		{A5D31A2F-4F09-4F70-ACC5-5FBA3AD7739F}.Release|x86.Build.0 = Release|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Debug|x64.Build.0 = Debug|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Debug|x86.Build.0 = Debug|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Release|x64.ActiveCfg = Release|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Release|x64.Build.0 = Release|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Release|x86.ActiveCfg = Release|Any CPU
+		{E45FD395-FB40-40AD-AEA5-9FCF24D183CF}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DBA84BF-676F-4596-B9D6-74497F8DD1DC}
+	EndGlobalSection
+EndGlobal
